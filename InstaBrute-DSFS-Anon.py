@@ -1,9 +1,9 @@
 '''
 TODO LIST:
-        Memperbaiki dan Membuat Fungsi Proxy Membaik
-        Kode Sort Lagi
-        Menambahkan untuk mempermudah "Yes/no" questions
-        Menambahkan "Tekan enter untuk keluar input"
+	Fix and make proxy function better
+	Sort code again
+	Add help function to all "Yes/no" questions
+	Add help  function to "Press enter to exit input"
 '''
 import requests
 import json
@@ -11,19 +11,6 @@ import time
 import os
 import random
 import sys
-
-print
-print  "+========================================+
-        |........... InstaBrute DSFS ............|
-        +----------------------------------------+
-        |         Creator : Anon6372098          | 
-        |      Thanks to  : Tuan c4rt00nw4r      |
- 	|         Github  : /Anon6372098         |
-        |Team : D4RK SYST3M F41LUR3 S33K3R (DSFS)|
-	+========================================+
-        |............ InstaBrute DSFS ...........|
-        +----------------------------------------+"
-print
 
 #Help function
 def Input(text):
