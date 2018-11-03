@@ -23,7 +23,7 @@ echo "\033[31;1mSubscribe Youtube : D4RK SYST3M F41LUR3 S33K3R"
 echo "\033[34;1m[============================]"
 sleep 1
 echo ""
-echo "\033[32;1mSilahkan Pilih Tool Intagram :"
+echo "\033[32;1mSilahkan Pilih Tool Instagram :"
 echo "\033[36;1m"
 echo "[===============================================]"
 echo "1.> InstaBrute DSFS Anon (Hack Instagram)"
