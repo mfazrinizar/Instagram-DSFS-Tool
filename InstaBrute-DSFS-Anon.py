@@ -1,9 +1,9 @@
 '''
 TODO LIST:
-	Fix and make proxy function better
-	Sort code again
-	Add help function to all "Yes/no" questions
-	Add help  function to "Tekan enter untuk keluar input"
+        Memperbaiki dan Membuat Fungsi Proxy Membaik
+        Kode Sort Lagi
+        Menambahkan untuk mempermudah "Yes/no" questions
+        Menambahkan "Tekan enter untuk keluar input"
 '''
 import requests
 import json
@@ -12,11 +12,8 @@ import os
 import random
 import sys
 
-#welcome 
-def welcome():
-	wel = """
-	
-	+========================================+
+print
+print  "+========================================+
         |........... InstaBrute DSFS ............|
         +----------------------------------------+
         |         Creator : Anon6372098          | 
@@ -25,8 +22,8 @@ def welcome():
         |Team : D4RK SYST3M F41LUR3 S33K3R (DSFS)|
 	+========================================+
         |............ InstaBrute DSFS ...........|
-        +----------------------------------------+\n\n
-"""
+        +----------------------------------------+"
+print
 
 #Help function
 def Input(text):
@@ -152,8 +149,6 @@ class Instabrute():
 
 
 
-
-print wel
 
 instabrute = Instabrute(Input(' Masukkan Target IG Mu: '))
 
