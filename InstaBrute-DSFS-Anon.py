@@ -12,8 +12,21 @@ import os
 import random
 import sys
 
-os.system("clear")	
-os.system("figlet InstaBrute DSFS")
+#welcome 
+def welcome():
+	wel = """
+	
+	+========================================+
+        |......... Facebook Brute DSFS ..........|
+        +----------------------------------------+
+        |         Creator : Anon6372098          | 
+        |      Thanks to  : Tuan c4rt00nw4r      |
+ 	|         Github  : /Anon6372098.        |
+        |Team : D4RK SYST3M F41LUR3 S33K3R (DSFS)|
+	+========================================+
+        |.......... Facebook Brute DSFS .........|
+        +----------------------------------------+\n\n
+"""
 
 #Help function
 def Input(text):
@@ -126,7 +139,7 @@ class Instabrute():
 
 			UsePorxy = Input('[*] Mau pakai proxy ? (y/n): ').upper()
 			if (UsePorxy == 'Y' or UsePorxy == 'YES'):
-				print ('[$] Try to use proxy after fail.')
+				print ('[$] Mencoba kembali proxy setelah gagal')
 				randomProxy() #Check that, may contain bugs
 			return False
 
@@ -140,6 +153,7 @@ class Instabrute():
 
 
 
+print wel
 
 instabrute = Instabrute(Input(' Masukkan Target IG Mu: '))
 
