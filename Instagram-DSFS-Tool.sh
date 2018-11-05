@@ -32,7 +32,6 @@ echo "2.> InstaBot (Bot Instagram, Update v2.0)"
 echo "[===============================================]"
 echo "0.> Keluar/Exit"
 echo "[===============================================]"
-echo $green
 read -p "root@InstagramDSFSTool]~#" anon
 
 if [ $anon = 1 ] || [ $anon = 1 ]
@@ -40,6 +39,7 @@ then
 clear
 figlet "InstaBrute DSFS" | lolcat
 python2 InstaBrute-DSFS-Anon.py
+echo $green
 fi
 
 if
@@ -48,6 +48,7 @@ then
 clear
 figlet "InstaBot DSFS" | lolcat
 python2 InstaBot-DSFS-Anon.py
+echo $green
 fi
 
 if [ $anon = 0 ] || [ $anon = 00 ]
