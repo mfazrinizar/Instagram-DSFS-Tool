@@ -45,7 +45,8 @@ if
 [ $anon = 2 ] || [ $anon = 2 ]
 then
 clear
-figlet "Belum Tersedia" | lolcat
+figlet "InstaBot DSFS" | lolcat
+python2 InstaBot-DSFS-Anon.py
 fi
 
 if [ $anon = 0 ] || [ $anon = 00 ]
