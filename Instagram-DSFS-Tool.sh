@@ -38,8 +38,8 @@ if [ $anon = 1 ] || [ $anon = 1 ]
 then
 clear
 figlet "InstaBrute DSFS" | lolcat
-python2 InstaBrute-DSFS-Anon.py
 echo $green
+python2 InstaBrute-DSFS-Anon.py
 fi
 
 if
@@ -47,8 +47,8 @@ if
 then
 clear
 figlet "InstaBot DSFS" | lolcat
-python2 InstaBot-DSFS-Anon.py
 echo $green
+python2 InstaBot-DSFS-Anon.py
 fi
 
 if [ $anon = 0 ] || [ $anon = 00 ]
