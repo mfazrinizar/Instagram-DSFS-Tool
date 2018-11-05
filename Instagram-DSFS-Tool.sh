@@ -28,10 +28,11 @@ echo "\033[36;1m"
 echo "[===============================================]"
 echo "1.> InstaBrute DSFS Anon (Hack Instagram)"
 echo "[===============================================]"
-echo "2.> InstaBot (Belum Tersedia, Next Rilis v2.0)"
+echo "2.> InstaBot (Bot Instagram, Update v2.0)"
 echo "[===============================================]"
 echo "0.> Keluar/Exit"
-echo -e $green"[===============================================]"
+echo "[===============================================]"
+echo $green
 read -p "root@InstagramDSFSTool]~#" anon
 
 if [ $anon = 1 ] || [ $anon = 1 ]
