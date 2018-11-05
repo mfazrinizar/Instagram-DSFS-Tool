@@ -1,0 +1,6 @@
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.instagram.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.instagram.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.instagram.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): www.instagram.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTP connection (1): ink361.com
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): ink361.com
